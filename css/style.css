@@ -121,8 +121,6 @@ h1, h2, h3 {
 }
 
 
-
-
 .overlay {
     position: fixed;
     top: 0;
@@ -199,6 +197,7 @@ h1, h2, h3 {
 .infooverskrift {
     width: 100%;
     text-align: center;
+    z-index: -1;
     position: absolute;
     margin-top: 50px;
     font-size: 50px;
@@ -254,7 +253,8 @@ h1, h2, h3 {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 50%;
     background-color: #929a68;
-
+    transition: .2s;
+    cursor: pointer;
 }
 
 .tilbageknap a {
@@ -263,5 +263,9 @@ h1, h2, h3 {
     margin-right: 5px;
     color: white;
     text-decoration: none;
+}
 
+.tilbageknap:hover {
+    background-color: #656b48;
+    transition: .2s;
 }

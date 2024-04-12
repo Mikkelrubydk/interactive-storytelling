@@ -5,6 +5,22 @@ document.addEventListener('DOMContentLoaded', function() {
     let fallingBomb = document.querySelector('.fallingBomb');
     let bombeEksplosion = document.querySelector('.eksplosion');
     let hvidOverlay = document.querySelector('.overlay');
+
+   // Funktion som ruller til toppen af siden
+function scrollTilTop() {
+    window.scrollTo(0, 0); // Rul til toppen af siden
+}
+
+// Funktion der udføres ved sidenindlæsning
+window.onload = function() {
+    scrollTilTop(); // Kalder her min tidligere funktion
+};
+
+// Funktion der udføres hver gang siden opdateres
+window.onbeforeunload = function() {
+    scrollTilTop(); // Rul til toppen, før siden opdateres
+};
+
     
     content.addEventListener('click', function() {
         // Startpositionen
@@ -12,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Højden af dokumentet
         let scrollHeight = document.body.scrollHeight;
         // Antal skridt før den når bunden
-        let steps = 550;
+        let steps = 600;
         // Beregning af skridtlængde
         let stepLength = (scrollHeight - startPosition) / steps;
     
