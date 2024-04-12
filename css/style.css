@@ -28,11 +28,14 @@ h1, h2, h3 {
     height: 280vh
 }
 
+.content {
+    margin-top: 50px;
+}
+
 .atombombe {
     display: flex;
     justify-content: center;
     object-fit: cover;
-    margin-top: 50px;
     cursor: pointer;
     z-index: -1;
 
@@ -63,6 +66,7 @@ h1, h2, h3 {
     height: 600px;
     bottom: 0;
     right: 0;
+    z-index: 2;
 }
 
 .eksplosion {
@@ -75,7 +79,7 @@ h1, h2, h3 {
     width: 200%;
     max-width: 100%;
     opacity: 0;
-    z-index: -1;
+    z-index: 1;
 }
 
 @keyframes combinedAnimation {
@@ -123,6 +127,7 @@ h1, h2, h3 {
     position: fixed;
     top: 0;
     left: 0;
+    bottom: 0;
     width: 100%;
     background-color: white; /* Start med hvid baggrund */
     z-index: -1;
