@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+body {
+    background-color: #f4efe9; 
+}
+
 .loadscreen {
     position: relative;
     scroll-behavior: smooth;
@@ -126,12 +130,6 @@ h1, h2, h3 {
 }
 
 /* Styling af atombombeinfo.html */
-
-.infobody {
-    background-color: #f4efe9;
-    z-index: -1;
-    
-}
 
 .atombombekategorier {
     height: 100vh;
@@ -261,8 +259,4 @@ h1, h2, h3 {
     color: white;
     text-decoration: none;
 
-}
-
-.udviklingbody {
-    background-color: #f4efe9;
 }
