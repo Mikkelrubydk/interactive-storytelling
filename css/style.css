@@ -4,6 +4,7 @@
 }
 
 .loadscreen {
+    position: relative;
     scroll-behavior: smooth;
     width: 100%;
     height: 500vh;
@@ -20,7 +21,7 @@ h1, h2, h3 {
     background-image: url(/img/skyer.png);
     width: 100%;
     object-fit: fill;
-    height: 290vh;
+    height: 280vh
 }
 
 .atombombe {
@@ -56,7 +57,7 @@ h1, h2, h3 {
     left: 0;
     max-width: 100%;
     height: 600px;
-    top: 450vh;
+    bottom: 0;
     right: 0;
 }
 
@@ -64,7 +65,7 @@ h1, h2, h3 {
     position: absolute;
     left: 0;
     margin: 0 auto;
-    top: 390vh;
+    bottom: 0;
     right: 0;
     height: 1000px;
     width: 200%;
@@ -119,7 +120,6 @@ h1, h2, h3 {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
     background-color: white; /* Start med hvid baggrund */
     z-index: -1;
     opacity: 0;
@@ -210,4 +210,59 @@ h1, h2, h3 {
     background-color: white;
     z-index: 1;
     opacity: 1;
+}
+
+/* Styling af udviklingen.html */
+
+.infographic {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.infographic img:first-child {
+    position: fixed;
+    width: 500px;
+    filter: drop-shadow(2px 2px 100px white);
+    z-index: 2;
+    margin-right: 40%;
+}
+
+.infographic img:nth-child(2) {
+    width: 100%;
+    height: 200vh;
+    position: absolute;
+    opacity: 1;
+    z-index: 1;
+}
+
+.tilbageknap {
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 50%;
+    background-color: #929a68;
+
+}
+
+.tilbageknap a {
+    font-size: 60px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    color: white;
+    text-decoration: none;
+
+}
+
+.udviklingbody {
+    background-color: #f4efe9;
 }
