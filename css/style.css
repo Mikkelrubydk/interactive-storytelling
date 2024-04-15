@@ -269,3 +269,30 @@ h1, h2, h3 {
     background-color: #656b48;
     transition: .2s;
 }
+
+.container {
+    position: relative;
+    height: 1000px;
+    overflow: hidden; /* For at skjule overskydende indhold, mens du scroller */
+  }
+  
+  .indhold {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .image-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .image-container img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .show {
+    opacity: 1;
+  }
