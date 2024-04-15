@@ -19,7 +19,7 @@ body {
 }
 
 h1, h2, h3 {
-    font-family: "Anta", sans-serif;;
+    font-family: "Anta", sans-serif;
 }
 
 .skyer {
@@ -120,6 +120,18 @@ h1, h2, h3 {
         box-shadow: 0 0 5px rgba(51, 51, 51, 0.8);
     }
 }
+
+@keyframes green-pulse {
+    0% {
+      filter: drop-shadow(5px 0 5px rgba(228, 135, 22, 0.4)); /* Starteffekten for drop skyggen */
+    }
+    50% {
+      filter: drop-shadow(10px 0 100px rgba(255, 140, 0, 0.8)); /* Midtvejseffekten for drop skyggen */
+    }
+    100% {
+      filter: drop-shadow(5px 0 5px rgba(228, 135, 22, 0.4)); /* Sluteffekten for drop skyggen */
+    }
+  }
 
 
 .overlay {
@@ -262,38 +274,86 @@ h1, h2, h3 {
     align-items: center;
     position: sticky;
     top: 0;
-    width: 100%;
     height: 100vh;
     }
 
   
-  .image-container img {
+  .image-container img:nth-child(1) {
     margin-left: 20%;
     height: auto;
-    width: 600px;
+    width: 650px;
     object-fit: cover;
   }
   
-  .faktakort{
+  .faktakort {
     margin-top: 100px;
-  height: 100vh;
-  position: relative;
-  z-index: 10;
-  display: grid;
-  justify-content: flex-end;
+    height: 100vh;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
-
+  
   .faktabody {
-    justify-self: end;
-    align-self: start;
-    color: white;
     padding: 20px;
+    margin-right: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
     border-radius: 20px;
     max-width: 350px;
-    height: auto;
     background-color: rgba(0, 0, 0, .5);
     font-weight: 500;
-    margin-right: 150px;
+    opacity: 0;
+    transition: opacity 1s ease; /* Add transition for smooth visibility */
   }
+
+  .faktabody h2 {
+    font-size: 30px;
+    padding-bottom: 20px;
+  }
+
+  .faktabody p {
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 400;
+    font-family: Helvetica, sans-serif;
+  }
+
+  .show {
+    opacity: 1;
+  }
+
+  .pil {
+    width: 150px;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Tilføj en overgang for en glidende effekt */
+  }
+
+  .pil1 {
+    position: absolute;
+    transform: scaleX(-1) rotate(40deg);
+    left: 440px;
+    top: 300px;
+  }
+
+  .pil2 {
+    position: absolute;
+    left: 570px;
+    transform: scaleX(-1) rotate(40deg);
+    top: 300px;
+  }
+
+  .pil3 {
+    position: absolute;
+    left: 800px;
+    top: 300px;
+    transform: scaleX(-1) rotate(40deg);
+  }
+
 
   
