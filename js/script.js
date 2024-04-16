@@ -17,13 +17,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Funktion der udføres hver gang siden opdateres
     window.onbeforeunload = scrollTilTop;
 
-    content.addEventListener('click', function() { 
+    content.addEventListener('click', function() {
         // Startpositionen
         let startPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
         // Højden af dokumentet
-        let scrollHeight = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight);
-        // Antal skridt før den når bunden
-        let steps = 600;
+        let scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+        // Beregning af varighed baseret på dokumentets højde (3000px per sekund)
+        let durationInSeconds = scrollHeight / 580;
+        // Antal skridt
+        let steps = durationInSeconds * 60; // 60 frames per sekund
         // Beregning af skridtlængde
         let stepLength = (scrollHeight - startPosition) / steps;
 
@@ -45,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
         animateScroll(startPosition);
 
         // Tilføj animationsegenskab for shake og slideDown til content elementet
-        this.style.animation = 'combinedAnimation 6s ease forwards';
+        this.style.animation = 'combinedAnimation ' + durationInSeconds + 's ease forwards';
 
         // Afspil lyden af den falende bombe
         fallingBomb.play();
@@ -54,13 +56,13 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(() => {
             // Start bombeEksplosion animationen
             bombeEksplosion.style.animation = 'fadeIn .8s ease forwards';
-        }, 4000); // 7 sekunder er varigheden af combinedAnimation, justeret med varigheden af bombeEksplosion
+        }, durationInSeconds * 1000 - 3200); // Justeret med varigheden af combinedAnimation
 
         setTimeout(() => {
             // Start fadeIn animationen for hvidOverlay
             hvidOverlay.style.animation = 'fadeIn 3s ease forwards';
             hvidOverlay.style.zIndex = '9999';
-        }, 5000); // 6 sekunder er varigheden af combinedAnimation, justeret med varigheden af bombeEksplosion
+        }, durationInSeconds * 1000 - 2000); // Justeret med varigheden af combinedAnimation minus 1 sekund
 
         hvidOverlay.addEventListener('animationend', function() {
             // Når animationen "hvidOverlay" er afsluttet = omdiriger brugeren til en anden side
