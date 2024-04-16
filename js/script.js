@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     "use strict";
-
+    
     let content = document.querySelector('.content');
     let fallingBomb = document.querySelector('.fallingBomb');
     let bombeEksplosion = document.querySelector('.eksplosion');
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Startpositionen
         let startPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
         // Højden af dokumentet
-        let scrollHeight = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight, document.documentElement.clientHeight);
+        let scrollHeight = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight);
         // Antal skridt før den når bunden
         let steps = 600;
         // Beregning af skridtlængde
