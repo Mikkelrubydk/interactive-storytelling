@@ -24,7 +24,7 @@ const observer = new IntersectionObserver((entries, observer) => {
       }
 
       // Hvis pilindex'et er 4, og animationen ikke allerede er tilføjet, tilføj green-pulse animation til det første billede i "image-container"
-      if (pilIndex === 4 && !document.querySelector('.image-container img:first-child').classList.contains('animate-first-image')) {
+      if (pilIndex === 4) {
         const firstImage = document.querySelector('.image-container img:first-child');
         firstImage.style.animation = 'green-pulse 2s infinite';
       }
