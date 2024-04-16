@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Funktion der udføres hver gang siden opdateres
     window.onbeforeunload = scrollTilTop;
 
-    content.addEventListener('click', function() {
+    content.addEventListener('click', function() { 
         // Startpositionen
         let startPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
         // Højden af dokumentet
