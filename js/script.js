@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let fallingBomb = document.querySelector('.fallingBomb');
     let bombeEksplosion = document.querySelector('.eksplosion');
     let hvidOverlay = document.querySelector('.overlay');
+    let starttekst = document.querySelector('.starttekst h1');
 
     // Funktion som ruller til toppen af siden
     function scrollTilTop() {
@@ -12,7 +13,22 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Funktion der udføres ved sidenindlæsning
-    window.onload = scrollTilTop;
+    window.onload = function() {
+        scrollTilTop();
+        // Start timeout-funktionen efter 5 sekunder
+        setTimeout(function() {
+            starttekst.textContent = "Hiroshima, 1946";
+            // Start timeout-funktionen for at ændre teksten igen efter 3 sekunder
+            setTimeout(function() {
+                starttekst.textContent = "April";
+            }, 3000);
+
+            setTimeout(() => {
+                starttekst.textContent = "Tryk på bomben for at begynde animationen"
+            }, 4000);
+
+        }, 2000);
+    };
 
     // Funktion der udføres hver gang siden opdateres
     window.onbeforeunload = scrollTilTop;

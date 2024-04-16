@@ -430,13 +430,26 @@ h1, h2, h3 {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    background-color: lightblue;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
   }
 
   .efterspilforside img {
-    width: 100%;
+    width: 60%;
+    margin-bottom: -50px;
+    height: 80%;
   }
 
+  /* Styling af oedelaeggelse.html */
+
+  .ol-container {
+    width: 100%;
+    height: 100vh;
+    background-image: url('/img/texture2.png');
+    background-size: cover;
+  }
 
 
   
