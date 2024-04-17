@@ -288,14 +288,19 @@ h1, h2, h3 {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
-.littleboyoverskrift h2 {
+.littleboyoverskrift { 
     display: flex;
+    align-items: center;
     position: sticky;
-    width: 100%;
-    justify-content: center;
-    margin-top: 100px;
+    padding-top: 100px;
+    margin-left: 20%;
+    top: 0;
+    
+}
+
+.littleboyoverskrift h2 {
     font-size: 45px;
-    top: 100vh;
+
     
 }
 
@@ -311,7 +316,7 @@ h1, h2, h3 {
     height: 50px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 50%;
-    background-color: #929a68;
+    background-color: rgba(0, 0, 0, 0.8);
     transition: .2s;
     cursor: pointer;
     z-index: 9999;
@@ -344,6 +349,7 @@ h1, h2, h3 {
     position: sticky;
     top: 0;
     height: 100vh;
+    margin-top: -100px;
     }
 
   
@@ -449,7 +455,11 @@ h1, h2, h3 {
     height: 100vh;
     background-image: url('/img/texture2.png');
     background-size: cover;
-  }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
 
 
   
