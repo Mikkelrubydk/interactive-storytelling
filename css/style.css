@@ -237,7 +237,7 @@ h1, h2, h3 {
 .udviklingforside {
     background-image: url('/img/texture.png');
     background-size: cover;
-    height: 108vh;
+    height: 115vh;
     margin-top: -100px;
     display: flex;
     align-items: center;
@@ -461,6 +461,52 @@ h1, h2, h3 {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.ol-container article {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    color: white;
+}
+
+.ol-container article p {
+    margin: 0 auto;
+    width: 70%;
+    text-align: justify;
+    line-height: 1.5;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.ol-container article h1 {
+    font-size: 45px;
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.ol-container figure {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ol-container figcaption {
+    color: white;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+.ol-container figure img {
+    width: 650px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
   
 
