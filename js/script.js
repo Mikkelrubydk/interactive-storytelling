@@ -97,5 +97,4 @@ startknap.addEventListener('click', function() {
     }, 5000); // 7000 ms = 7 sekunders forsinkelse
 });
 
-
 });
