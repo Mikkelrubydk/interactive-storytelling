@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
     let bombeEksplosion = document.querySelector('.eksplosion');
     let hvidOverlay = document.querySelector('.overlay');
     let starttekst = document.querySelector('.starttekst h1');
+    let startknap = document.querySelector('.startknap');
+    let flyLyd = document.querySelector('.flyLyd');
+    let fly = document.querySelector('.bombefly img')
 
     // Funktion som ruller til toppen af siden
     function scrollTilTop() {
@@ -15,25 +18,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Funktion der udføres ved sidenindlæsning
     window.onload = function() {
         scrollTilTop();
-        // Start timeout-funktionen efter 5 sekunder
-        setTimeout(function() {
-            starttekst.textContent = "Hiroshima, 1946";
-            // Start timeout-funktionen for at ændre teksten igen efter 3 sekunder
-            setTimeout(function() {
-                starttekst.textContent = "April";
-            }, 3000);
-
-            setTimeout(() => {
-                starttekst.textContent = "Tryk på bomben for at begynde animationen"
-            }, 4000);
-
-        }, 2000);
     };
 
     // Funktion der udføres hver gang siden opdateres
     window.onbeforeunload = scrollTilTop;
 
-    content.addEventListener('click', function() { 
+    // Funktion for at starte animationen
+    function startAnimation() {
         // Startpositionen
         let startPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
         // Højden af dokumentet
@@ -43,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Beregning af skridtlængde
         let stepLength = (scrollHeight - startPosition) / steps;
 
-        // Start animation
+        // Start animationen
         function animateScroll(currentPosition) {
             if (currentPosition < scrollHeight) {
                 // Beregn næste position
@@ -61,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
         animateScroll(startPosition);
 
         // Tilføj animationsegenskab for shake og slideDown til content elementet
-        this.style.animation = 'combinedAnimation 6s ease forwards';
+        content.style.animation = 'combinedAnimation 6s ease forwards';
 
         // Afspil lyden af den falende bombe
         fallingBomb.play();
@@ -82,5 +73,29 @@ document.addEventListener('DOMContentLoaded', function() {
             // Når animationen "hvidOverlay" er afsluttet = omdiriger brugeren til en anden side
             window.location.href = '/pages/atombombeinfo.html';
         });
-    });
+    }
+
+    // Eventlistener for klik på startknappen
+startknap.addEventListener('click', function() {
+
+    flyLyd.play();
+
+    fly.style.animation = 'shake 2s infinite';
+
+    setTimeout(() => {
+        starttekst.textContent = "Hiroshima, 1945";
+    }, 1000); // 1000 ms = 1 sekund forsinkelse
+
+    setTimeout(() => {
+        starttekst.textContent = "6. august, 08:15";
+    }, 3000); // 3000 ms = 3 sekunders forsinkelse
+
+    setTimeout(() => {
+        starttekst.textContent = "";
+        // Start animationen
+        startAnimation(); // Start animationen efter sidste timeout
+    }, 5000); // 7000 ms = 7 sekunders forsinkelse
+});
+
+
 });
