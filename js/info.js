@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Funktion til at starte fadeOut animation
     function startupFade() {
-        fadeOverlay.style.animation = 'fadeOut 3s ease forwards';
+        fadeOverlay.style.animation = 'fadeOut 2s ease forwards';
     }
 
     // Start fadeOut animationen
