@@ -14,10 +14,43 @@
         <div class="tilbageknap"><p>&#8249;</p></div>
     </a>
 
-    <main>
-        <figure class="efterspilforside">
-            <img src="/img/efterspil.png" alt="ødelagt by">
+    <section class="efterspilforside">
+        <article>
+            <h1>Atombombens Efterspil</h1>
+            <p>
+                Efterspillet af bombens fald var ikke blot en historie om ødelæggelse, men også om mod og solidaritet. Overlevende, kendt som hibakusha, kæmpede ikke kun for deres egen overlevelse, men også for at bringe trøst og hjælp til hinanden i en tid med dyb smerte og lidelse. Trods deres traumer og tab samledes samfundet omkring et fælles mål: at genopbygge Hiroshima og skabe en fremtid uden krig og atomvåben.
+                Den langvarige genopbygningsproces blev ledsaget af en stærk fredsbevægelse, der voksede frem fra byens ruiner. Hiroshima blev et globalt symbol på håb og en påmindelse om de forfærdelige konsekvenser af krig og vold. Fredsmarcher, mindesmærker og fredsmøder blev etableret for at minde verden om nødvendigheden af at arbejde sammen for at forhindre lignende tragedier i fremtiden.
+                I dag står Hiroshima som et levende monument over menneskets vilje til at overvinde modgang og skabe forandring. Hiroshima Peace Memorial, med dets ikoniske Genbaku Dome, er et symbolsk udtryk for byens stærke engagement i fred og forsoning. Gennem fredsmæssige initiativer, uddannelse og erindring fortsætter Hiroshima med at inspirere verden til at stræbe efter en fredeligere og mere retfærdig fremtid.
+            </p>
+        </article>
+        <figure>
+            <img src="/img/ruin.png" alt="Ruin efter atombomben">
+            <figcaption>
+                Illustration af Hiroshima Peace Memorial, også kendt som Genbaku Dome eller A-bomb Dome.
+            </figcaption>
         </figure>
-    </main>
+    </section>
+
+    <section class="efterspillet">
+        <button id="start-knap">
+            <img src="/img/play.png" alt="startknap">
+            START SPILLET
+        </button>
+        <div id="spil-status"></div>
+        <div id="mand"><img src="/img/mand.png" alt="japansk mand"></div>
+        <div id="bombe"><img src="/img/littleboy.png" alt=""></div>
+        <div id="level"></div>
+        <div id="græs"><img src="/img/græs.png" alt="Græs"></div>
+        <div id="baggrund"></div>
+    </section>
+
+    <audio id="fail" src="/audio/fail.mp3"></audio>
+
+    <audio id="levelup" src="/audio/levelup.mp3"></audio>
+
+    <audio id="baggrundsmusik" src="/audio/baggrundsmusik.mp3"></audio>
+
+    <script src="/js/efterspil.js"></script>
+
 </body>
 </html>

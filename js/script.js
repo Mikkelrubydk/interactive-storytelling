@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Højden af dokumentet
         let scrollHeight = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight);
         // Antal skridt før den når bunden
-        let steps = 600;
+        let steps = 150;
         // Beregning af skridtlængde
         let stepLength = (scrollHeight - startPosition) / steps;
 

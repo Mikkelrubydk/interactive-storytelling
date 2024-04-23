@@ -288,8 +288,7 @@ h1, h2, h3 {
 .udviklingforside {
     background-image: url('/img/texture.png');
     background-size: cover;
-    height: 115vh;
-    margin-top: -100px;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -357,7 +356,7 @@ h1, h2, h3 {
 
 
 .tilbageknap {
-    position: absolute;
+    position: fixed;
     left: 40px;
     top: 40px;
     display: flex;
@@ -487,20 +486,175 @@ h1, h2, h3 {
   /* Styling af Efterspil.html */
 
   .efterspilforside {
-    width: 100%;
+    background-image: url('/img/texture3.png');
+    background-size: cover;
     height: 100vh;
-    overflow: hidden;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: center;
+}
 
-  }
+.efterspilforside article {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    color: white;
+}
 
-  .efterspilforside img {
-    width: 60%;
-    margin-bottom: -50px;
-    height: 80%;
-  }
+.efterspilforside article p {
+    margin: 0 auto;
+    width: 80%;
+    text-align: justify;
+    line-height: 1.5;
+    font-weight: 100;
+    font-size: 19px;
+}
+
+.efterspilforside article h1 {
+    font-size: 45px;
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.efterspilforside figure {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.efterspilforside figcaption {
+    color: white;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+.efterspilforside figure img {
+    width: 650px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.efterspillet {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+#baggrund {
+    width: 100%;
+    position: absolute;
+    height: 100vh;
+    background: rgb(194,222,255);
+    background: linear-gradient(0deg, rgba(194,222,255,1) 0%, rgba(7,66,138,1) 100%);
+    display: none;
+    z-index: -1;
+}
+
+
+#spil-status {
+    display: flex;
+    font-size: 40px;
+    margin-top: -200px;
+}
+
+#mand {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+#mand img {
+    width: 75px;
+    margin-top: -80px;
+}
+
+#bombe {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+#bombe img {
+    width: 50px;
+}
+
+#level {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    font-family: "Anta", sans-serif;
+    color: white;
+}
+
+#spil-status,
+#mand,
+#bombe,
+#level {
+    display: none;
+}
+
+#start-knap {
+    padding: 10px 20px;
+    display: flex;
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    border: 1px solid black;
+    background-color: rgba(145, 186, 145, 0.5);
+    position: absolute;
+    font-size: 50px;
+    transition: 1s;
+    font-family: "Anta", sans-serif;
+    cursor: pointer;
+}
+
+#start-knap img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+#start-knap:hover {
+    background-color: rgb(91, 152, 91);
+    transition: 1s;
+    cursor: pointer;
+}
+
+#græs {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    display: none;
+}
+
+#græs img {
+    width: 100%;
+    margin-bottom: -5px;
+
+}
+
+
+
+
 
   /* Styling af oedelaeggelse.html */
 
@@ -560,6 +714,84 @@ h1, h2, h3 {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
   
+.nukemap {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
 
+.nukemap figure {
+    width: 50%;
+    height: 100%;
+}
+
+.nukemap figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nukeinfo {
+    width: 50%;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nukeinfo article {
+    width: 70%;
+}
+
+.nukeinfo h2 {
+    font-size: 20px;
+}
+
+.nukeinfo p {
+    font-size: 12px;
+    line-height: 1.2;
+    text-align: justify;
+}
+
+.nukeinfo .cirkel {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    position: absolute;
+    margin-left: -35px;
+    opacity: 0.6;
+    border: .1px solid black;
+
+}
+
+.nukeinfo .gul {
+    background-color: #f1e00c;
+}
+
+.nukeinfo .rød {
+    background-color: red;
+}
+
+.nukeinfo .grøn {
+    background-color: rgb(2, 205, 2);
+}
+
+.nukeinfo .grå {
+    background-color: #c3c3c3;
+}
+
+.nukeinfo .orange {
+    background-color: #f8b232;
+}
+
+.nukeinfo .sortgrå {
+    background-color: #868686;
+}
+
+.nukeinfo .nukeoverskrift {
+    font-size: 40px;
+}
 
   
