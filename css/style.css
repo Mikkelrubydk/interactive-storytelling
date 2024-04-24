@@ -92,7 +92,7 @@ h1, h2, h3 {
 .atombombe img {
     scroll-behavior: smooth;
     width: 35px;
-    position:fixed;
+    position: absolute;
     cursor: pointer;
 }
 
@@ -578,8 +578,8 @@ h1, h2, h3 {
 }
 
 #mand img {
-    width: 75px;
-    margin-top: -80px;
+    width: 100px;
+    margin-top: -125px;
 }
 
 #bombe {
@@ -651,10 +651,6 @@ h1, h2, h3 {
     margin-bottom: -5px;
 
 }
-
-
-
-
 
   /* Styling af oedelaeggelse.html */
 

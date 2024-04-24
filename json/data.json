@@ -1,0 +1,33 @@
+[
+    {
+      "color": "gul",
+      "radius": "198 m (0,12 km²)",
+      "description": "Den maksimale størrelse af den radioaktive brandkugle; relevansen for skader på jorden afhænger af detonationshøjden. Hvis den rører jorden, øges mængden af radioaktivt nedfald markant. Alt inde i brandkuglen fordamper effektivt. Minimumsbrudhøjde for negligerbart nedfald: 162 m."
+    },
+    {
+      "color": "rød",
+      "radius": "339 m (0,36 km²)",
+      "description": "Ved 20 psi overtryk er kraftigt byggede betonbygninger alvorligt beskadiget eller ødelagt; dødsfaldene nærmer sig 100%. Ofte bruges som et benchmark for alvorlige skader i byer. Optimal brudhøjde for at maksimere denne effekt er 449 m."
+    },
+    {
+      "color": "grøn",
+      "radius": "1,2 km (4,51 km²)",
+      "description": "500 rem ioniserende strålingsdosis; sandsynligvis dødelig, efter cirka 1 måned; 15% af overlevende vil efterfølgende dø af kræft som følge af eksponering."
+    },
+    {
+      "color": "grå",
+      "radius": "1,67 km (8,78 km²)",
+      "description": "Ved 5 psi overtryk kollapser de fleste boligbygninger, skader er universelle, dødsfald er udbredte. Risikoen for brande i kommercielle og boligskader er høj, og bygninger, der er så beskadigede, er i høj risiko for at sprede brand. Ofte brugt som benchmark for moderate skader i byer. Optimal brudhøjde for at maksimere denne effekt er 770 m."
+    },
+    {
+      "color": "orange",
+      "radius": "1,91 km (11,4 km²)",
+      "description": "Tredjegradsforbrændinger strækker sig gennem hudlagene og er ofte smertefri, fordi de ødelægger smertenerverne. De kan forårsage alvorlige ar eller invaliditet og kan kræve amputation. Sandsynligheden for 3. grads forbrændinger ved dette energiudbytte er 8,7 cal/cm²."
+    },
+    {
+      "color": "sortgrå",
+      "radius": "4,52 km (64,1 km²)",
+      "description": "Ved ca. 1 psi overtryk kan man forvente, at glasruder brydes. Dette kan forårsage mange skader hos en omkringliggende befolkning, der kommer til et vindue efter at have set flashet fra en atomeksplosion (som bevæger sig hurtigere end trykbølgen). Ofte brugt som benchmark for let skade i byer. Optimal brudhøjde for at maksimere denne effekt er 1.150 m."
+    }
+  ]
+  

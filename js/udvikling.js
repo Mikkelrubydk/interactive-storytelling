@@ -1,4 +1,4 @@
-// Vælg alle elementer med klassen 'faktakort'
+// Vælger alle elementer med klassen 'faktakort'
 const faktakortElements = document.querySelectorAll('.faktakort');
 
 // Definér, hvad der skal ske, når et element er synligt på skærmen

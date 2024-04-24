@@ -1,0 +1,3 @@
+FORKLARING AF IMPLEMENTERING AF JSON I PROJEKTET
+
+JSON er blevet implementeret i vores afsnit omkring Little Boy's radius ift rækkevidde, stråling osv. Data'en er opbevaret i vores 'data.json' fil, som bliver fetch'et i JavaScript. Derefter har vi lavet variabler til de forskellige elementer, hvorefter vi har angivet deres placering ved hjælp af 'appendChild'. Derudover har vi sikret os, at diverse fejl bliver skrevet ud i console ved at 'catche' de errors der kunne komme ved hentning af vores JSON-data.

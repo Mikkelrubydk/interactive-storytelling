@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Højden af dokumentet
         let scrollHeight = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight);
         // Antal skridt før den når bunden
-        let steps = 150;
+        let steps = 550;
         // Beregning af skridtlængde
         let stepLength = (scrollHeight - startPosition) / steps;
 
@@ -51,11 +51,15 @@ document.addEventListener('DOMContentLoaded', function() {
         // Start animationen
         animateScroll(startPosition);
 
+        // Sætter bombens position som fixed
+        content.style.position = 'fixed'
+
         // Tilføj animationsegenskab for shake og slideDown til content elementet
         content.style.animation = 'combinedAnimation 6s ease forwards';
 
-        // Afspil lyden af den falende bombe
+        // Afspil lyden af den faldende bombe
         fallingBomb.play();
+        fallingBomb.volume = 0.1;
 
         // Vent på, at combinedAnimation er færdig
         setTimeout(() => {
@@ -79,6 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
 startknap.addEventListener('click', function() {
 
     flyLyd.play();
+    flyLyd.volume = 0.1
 
     fly.style.animation = 'shake 2s infinite';
 
@@ -94,7 +99,7 @@ startknap.addEventListener('click', function() {
         starttekst.textContent = "";
         // Start animationen
         startAnimation(); // Start animationen efter sidste timeout
-    }, 5000); // 7000 ms = 7 sekunders forsinkelse
+    }, 5000); // 5000 ms = 5 sekunders forsinkelse
 });
 
 });

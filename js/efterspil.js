@@ -20,10 +20,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function startSpil() {
         startKnap.style.display = 'none';
-        spilStatus.innerText = ''; // Nulstil indholdet af spil-status
+        spilStatus.innerText = ''; // Nulstiller indholdet af spil-status
         spilStatus.style.display = 'block';
         mand.style.display = 'block';
-        bombe.style.display = 'block'; // Gør bomben synlig
+        bombe.style.display = 'block';
         levelDisplay.style.display = 'block';
         levelDisplay.innerText = 'Niveau: ' + level;
         græs.style.display = 'block'
@@ -41,11 +41,11 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('keydown', function(event) {
         if (event.key === 'ArrowLeft') {
             mandX -= 50;
-            if (mandX < 0) mandX = 0; // Sørg for at mand ikke går uden for venstre kant
+            if (mandX < 0) mandX = 0; // Sørg for at 'mand' ikke går uden for venstre kant
             mand.style.left = mandX + 'px';
         } else if (event.key === 'ArrowRight') {
             mandX += 50;
-            if (mandX + mand.offsetWidth > window.innerWidth) mandX = window.innerWidth - mand.offsetWidth; // Sørg for at mand ikke går uden for højre kant
+            if (mandX + mand.offsetWidth > window.innerWidth) mandX = window.innerWidth - mand.offsetWidth; // Sørg for at 'mand' ikke går uden for højre kant
             mand.style.left = mandX + 'px';
         }
     });
